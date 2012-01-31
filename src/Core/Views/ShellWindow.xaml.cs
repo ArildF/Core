@@ -1,11 +1,12 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
 
 namespace Rogue.Core.UI.Views
 {
     /// <summary>
     /// Interaction logic for ShellWindow.xaml
     /// </summary>
-    public partial class ShellWindow
+    public partial class ShellWindow : IShellWindow
     {
         public ShellWindow()
         {
@@ -16,5 +17,10 @@ namespace Rogue.Core.UI.Views
         {
             DragMove();
         }
+
+    	public Window Window
+    	{
+    		get { return this; }
+    	}
     }
 }
