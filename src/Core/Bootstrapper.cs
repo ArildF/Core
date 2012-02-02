@@ -5,6 +5,10 @@ using Rogue.Core.UI.Views;
 
 namespace Rogue.Core.UI
 {
+	public class FooBar
+	{
+		
+	}
 	class Bootstrapper
 	{
 		private readonly IWindsorContainer _container;

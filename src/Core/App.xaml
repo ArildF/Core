@@ -1,8 +1,8 @@
 ﻿<Application x:Class="Rogue.Core.UI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             >
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:UI="clr-namespace:Rogue.Core.UI">
+	
     <Application.Resources>
-         
-    </Application.Resources>
+		
+	</Application.Resources>
 </Application>

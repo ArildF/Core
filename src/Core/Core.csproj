@@ -113,6 +113,7 @@
     <Compile Include="Behaviors\BorderlessWindowBehavior.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CoreWindsorInstaller.cs" />
+    <Compile Include="Infrastructure\ViewModelRegistrationFacility.cs" />
     <Compile Include="interfaces.cs" />
     <Compile Include="Views\ShellWindow.xaml.cs">
       <DependentUpon>ShellWindow.xaml</DependentUpon>
@@ -150,7 +151,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Infrastructure\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

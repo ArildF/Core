@@ -3,6 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:UI="clr-namespace:Rogue.Core.UI"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:Behaviors="clr-namespace:Rogue.Core.UI.Behaviors" Title="Core" Height="800" Width="1000">
+	<Window.Resources>
+		
+	</Window.Resources>
 	<Window.Background>
 		<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
 			<GradientStop Color="#FF3BA2BC" Offset="1"/>
@@ -20,6 +23,5 @@
     	<TextBlock 
             MouseDown="OnMouseDown"
             TextWrapping="Wrap" Text="Core" VerticalAlignment="Center" FontSize="48" FontWeight="Thin" TextAlignment="Center" Foreground="White"/>
-        
     </Grid>
 </Window>

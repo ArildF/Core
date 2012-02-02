@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Rogue.Core.UI.Views
@@ -13,7 +14,8 @@ namespace Rogue.Core.UI.Views
             InitializeComponent();
         }
 
-        private void OnMouseDown(object sender, MouseButtonEventArgs e)
+
+    	private void OnMouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
