@@ -112,7 +112,11 @@
     </Compile>
     <Compile Include="Behaviors\BorderlessWindowBehavior.cs" />
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controls\TileControl.cs" />
+    <Compile Include="Controls\TileItem.cs" />
+    <Compile Include="Controls\TilePanel.cs" />
     <Compile Include="CoreWindsorInstaller.cs" />
+    <Compile Include="Infrastructure\Extensions.cs" />
     <Compile Include="Infrastructure\ViewModelRegistrationFacility.cs" />
     <Compile Include="interfaces.cs" />
     <Compile Include="Views\ShellWindow.xaml.cs">
