@@ -5,14 +5,19 @@ using System.Windows.Input;
 namespace Rogue.Core.UI.Views
 {
     /// <summary>
-    /// Interaction logic for ShellWindow.xaml
+    /// Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class ShellWindow : IShellWindow
+    public partial class ShellView : IShellWindow
     {
-        public ShellWindow()
+        private ShellView()
         {
             InitializeComponent();
         }
+
+    	public ShellView(IShellViewModel model) : this()
+    	{
+    		DataContext = model;
+    	}
 
 
     	private void OnMouseDown(object sender, MouseButtonEventArgs e)

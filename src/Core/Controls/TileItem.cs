@@ -2,7 +2,7 @@
 
 namespace Rogue.Core.UI.Controls
 {
-	public class TileItem : ContentControl
+	public class TileItem : Button
 	{
 	}
 }

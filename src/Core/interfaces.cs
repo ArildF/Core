@@ -7,4 +7,10 @@ namespace Rogue.Core.UI
 	{
 		Window Window { get; }
 	}
+
+	public interface IShellViewModel
+	{}
+	public interface IMainScreen
+	{
+	}
 }

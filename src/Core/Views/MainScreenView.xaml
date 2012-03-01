@@ -1,0 +1,13 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="clr-namespace:Rogue.Core.UI.Controls" x:Class="Rogue.Core.UI.Views.MainScreenView" 
+             mc:Ignorable="d" 
+             d:DesignHeight="444" d:DesignWidth="817">
+    <Grid>
+    	<Controls:TileControl HorizontalAlignment="Center" VerticalAlignment="Center"
+							  ItemsSource="{Binding Path=Modules}"/>
+    </Grid>
+</UserControl>
