@@ -78,6 +78,7 @@
       <HintPath>..\packages\reactiveui-xaml.2.5.2.0\lib\Net4\ReactiveUI.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Reactive, Version=1.1.11111.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -118,9 +119,13 @@
     <Compile Include="Controls\TileItem.cs" />
     <Compile Include="Controls\TilePanel.cs" />
     <Compile Include="CoreWindsorInstaller.cs" />
+    <Compile Include="messages.cs" />
+    <Compile Include="ExerciseModule.cs" />
     <Compile Include="Infrastructure\Extensions.cs" />
     <Compile Include="Infrastructure\ViewModelRegistrationFacility.cs" />
     <Compile Include="interfaces.cs" />
+    <Compile Include="ModuleContainer.cs" />
+    <Compile Include="ModuleLoader.cs" />
     <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
       <DependentUpon>SampleDataSource.xaml</DependentUpon>
     </Compile>
@@ -132,6 +137,7 @@
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WeightModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

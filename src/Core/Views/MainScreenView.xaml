@@ -9,6 +9,6 @@
              d:DesignHeight="444" d:DesignWidth="817">
 	<Grid>
     	<Controls:TileControl HorizontalAlignment="Center" VerticalAlignment="Center"
-							  ItemsSource="{Binding Path=Modules}" IsTabStop="False"/>
+							  ItemsSource="{Binding Path=ModuleTileViewModels}" IsTabStop="False"/>
     </Grid>
 </UserControl>

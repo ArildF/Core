@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 
 namespace Rogue.Core.UI
 {
@@ -10,7 +11,18 @@ namespace Rogue.Core.UI
 
 	public interface IShellViewModel
 	{}
+
 	public interface IMainScreen
 	{
+	}
+
+	public interface IModuleContainer
+	{
+		IEnumerable<IModule> GetModules();
+	}
+
+	public interface IModule
+	{
+		object TileViewModel { get; }
 	}
 }

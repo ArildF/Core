@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using ReactiveUI;
 
 namespace Rogue.Core.UI.Views
 {
@@ -9,14 +10,24 @@ namespace Rogue.Core.UI.Views
     /// </summary>
     public partial class ShellView : IShellWindow
     {
-        private ShellView()
+    	private readonly IMessageBus _bus;
+
+    	private ShellView()
         {
             InitializeComponent();
         }
 
-    	public ShellView(IShellViewModel model) : this()
+    	public ShellView(IShellViewModel model, IMessageBus bus) : this()
     	{
+    		_bus = bus;
     		DataContext = model;
+
+			Loaded += OnLoaded;
+    	}
+
+    	private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+    	{
+    		_bus.SendMessage<ApplicationLoadedMessage>(null);
     	}
 
 

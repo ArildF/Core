@@ -1,12 +1,17 @@
-﻿namespace Rogue.Core.UI.ViewModels
+﻿using ReactiveUI;
+using Rogue.Core.UI.Infrastructure;
+
+namespace Rogue.Core.UI.ViewModels
 {
 	public class MainScreenViewModel : IMainScreen
 	{
-		public MainScreenViewModel()
+		public MainScreenViewModel(IMessageBus bus)
 		{
-			Modules = new[] {"One", "Two", "Three", "Four", "Five", "Six", "Seven"};
+			ModuleTileViewModels = new ReactiveCollection<object>();
+
+			bus.Listen<ModuleLoadedMessage>().SubscribeUI(mle => ModuleTileViewModels.Add(mle.Module.TileViewModel));
 		}
 
-		public string[] Modules { get; internal set; }
+		public ReactiveCollection<object> ModuleTileViewModels { get; internal set; }
 	}
 }
