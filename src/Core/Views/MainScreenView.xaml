@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:Controls="clr-namespace:Rogue.Core.UI.Controls" x:Class="Rogue.Core.UI.Views.MainScreenView" 
              mc:Ignorable="d" 
+			IsTabStop="False"
              d:DesignHeight="444" d:DesignWidth="817">
-    <Grid>
+	<Grid>
     	<Controls:TileControl HorizontalAlignment="Center" VerticalAlignment="Center"
-							  ItemsSource="{Binding Path=Modules}"/>
+							  ItemsSource="{Binding Path=Modules}" IsTabStop="False"/>
     </Grid>
 </UserControl>

@@ -25,6 +25,6 @@
             TextWrapping="Wrap" Text="Core" VerticalAlignment="Center" FontSize="48" FontWeight="Thin" TextAlignment="Center" Foreground="White"/>
 		
 		
-		<ContentControl Content="{Binding MainContent}" Grid.Row="1"/>
+		<ContentControl Content="{Binding MainContent}" Grid.Row="1" IsTabStop="False"/>
     </Grid>
 </Window>
