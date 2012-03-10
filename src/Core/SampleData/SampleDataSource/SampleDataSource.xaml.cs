@@ -38,18 +38,18 @@ namespace Expression.Blend.SampleData.SampleDataSource
 			}
 		}
 
-		private Modules _Modules = new Modules();
+		private ModuleTileViewModels _ModuleTileViewModels = new ModuleTileViewModels();
 
-		public Modules Modules
+		public ModuleTileViewModels ModuleTileViewModels
 		{
 			get
 			{
-				return this._Modules;
+				return this._ModuleTileViewModels;
 			}
 		}
 	}
 
-	public class ModulesItem : System.ComponentModel.INotifyPropertyChanged
+	public class ModuleTileViewModelsItem : System.ComponentModel.INotifyPropertyChanged
 	{
 		public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
@@ -61,21 +61,21 @@ namespace Expression.Blend.SampleData.SampleDataSource
 			}
 		}
 
-		private string _Property1 = string.Empty;
+		private string _Name = string.Empty;
 
-		public string Property1
+		public string Name
 		{
 			get
 			{
-				return this._Property1;
+				return this._Name;
 			}
 
 			set
 			{
-				if (this._Property1 != value)
+				if (this._Name != value)
 				{
-					this._Property1 = value;
-					this.OnPropertyChanged("Property1");
+					this._Name = value;
+					this.OnPropertyChanged("Name");
 				}
 			}
 		}
@@ -100,7 +100,7 @@ namespace Expression.Blend.SampleData.SampleDataSource
 		}
 	}
 
-	public class Modules : System.Collections.ObjectModel.ObservableCollection<ModulesItem>
+	public class ModuleTileViewModels : System.Collections.ObjectModel.ObservableCollection<ModuleTileViewModelsItem>
 	{ 
 	}
 #endif

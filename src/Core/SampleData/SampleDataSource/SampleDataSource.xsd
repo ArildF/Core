@@ -8,16 +8,16 @@
   <xs:element name="SampleDataSource" type="tns:SampleDataSource" />
   <xs:complexType name="SampleDataSource">
     <xs:sequence>
-      <xs:element name="Modules" type="tns:Modules" />
+      <xs:element name="ModuleTileViewModels" type="tns:ModuleTileViewModels" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Modules">
+  <xs:complexType name="ModuleTileViewModels">
     <xs:sequence>
-      <xs:element maxOccurs="unbounded" name="ModulesItem" type="tns:ModulesItem" />
+      <xs:element maxOccurs="unbounded" name="ModuleTileViewModelsItem" type="tns:ModuleTileViewModelsItem" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="ModulesItem">
-    <xs:attribute name="Property1" type="xs:string" />
+  <xs:complexType name="ModuleTileViewModelsItem">
+    <xs:attribute name="Name" type="xs:string" />
     <xs:attribute name="Property2" type="xs:boolean" />
   </xs:complexType>
 </xs:schema>

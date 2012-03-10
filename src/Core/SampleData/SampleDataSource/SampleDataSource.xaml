@@ -4,11 +4,10 @@
       changes to this file can cause errors.
 -->
 <SampleData:SampleDataSource xmlns:SampleData="clr-namespace:Expression.Blend.SampleData.SampleDataSource">
-	<SampleData:SampleDataSource.Modules>
-		<SampleData:ModulesItem Property1="Aenean nam class mauris" Property2="True"/>
-		<SampleData:ModulesItem Property1="Cras nullam aliquam" Property2="False"/>
-		<SampleData:ModulesItem Property1="Sed integer curae maecenas" Property2="True"/>
-		<SampleData:ModulesItem Property1="Praesent aptent duis" Property2="False"/>
-		<SampleData:ModulesItem Property1="Auctor congue accumsan donec" Property2="True"/>
-	</SampleData:SampleDataSource.Modules>
+	<SampleData:SampleDataSource.ModuleTileViewModels>
+		<SampleData:ModuleTileViewModelsItem Name="Weight" Property2="True"/>
+		<SampleData:ModuleTileViewModelsItem Name="Exercise" Property2="False"/>
+		<SampleData:ModuleTileViewModelsItem Name="Diet" Property2="True"/>
+		<SampleData:ModuleTileViewModelsItem Name="Challenges" Property2="False"/>
+	</SampleData:SampleDataSource.ModuleTileViewModels>
 </SampleData:SampleDataSource>
