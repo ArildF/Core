@@ -29,9 +29,9 @@
 			TextWrapping="Wrap" Text="Core" VerticalAlignment="Center" FontSize="48" FontWeight="Thin" TextAlignment="Center" Foreground="White"/>
 
 		<Button Grid.Row="0" Grid.Column="0" Content="BACK"
-				Style="{StaticResource NavigationButton}"
 				Command="{Binding NavigateBackCommand}"
-				Visibility="{Binding CanNavigateBack, Converter={StaticResource BoolToVisibilityConverter}}"/>
+				Visibility="{Binding CanNavigateBack, Converter={StaticResource BoolToVisibilityConverter}}" 
+				Template="{DynamicResource _backButtonTemplate}" Width="50" Height="50" VerticalAlignment="Center" Background="Transparent" Foreground="White" HorizontalAlignment="Left"/>
 
 		<ContentControl Content="{Binding MainContent}" Grid.Row="1" IsTabStop="False" Grid.ColumnSpan="2"/>
 	</Grid>
