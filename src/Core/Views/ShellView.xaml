@@ -13,6 +13,10 @@
 	<Window.Resources>
 		<BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
 	</Window.Resources>
+	
+	<Window.InputBindings>
+		<KeyBinding Key="Back" Command="{Binding NavigateBackCommand}"/>
+	</Window.InputBindings>
 	<i:Interaction.Behaviors>
 		<Behaviors:BorderlessWindowBehavior/>
 	</i:Interaction.Behaviors>
