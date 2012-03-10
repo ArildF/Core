@@ -4,11 +4,16 @@ namespace Rogue.Core.UI
 {
 	public class WeightModule : IModule
 	{
-		public WeightModule(WeightTileViewModel vm)
+		private readonly WeightTileViewModel _tileViewModel;
+
+		public WeightModule()
 		{
-			TileViewModel = vm;
+			_tileViewModel = new WeightTileViewModel(this);
+			MainViewModel = new WeightMainScreenViewModel();
 		}
 
-		public object TileViewModel { get; private set; }
+		public ITileViewModel TileViewModel { get { return _tileViewModel; } }
+
+		public object MainViewModel { get; private set; }
 	}
 }

@@ -2,9 +2,14 @@
 {
 	public class DietModule : IModule
 	{
-		public object TileViewModel
+		public ITileViewModel TileViewModel
 		{
-			get { return "Diet"; }
+			get { return null; }
+		}
+
+		public object MainViewModel
+		{
+			get { return null; }
 		}
 	}
 }

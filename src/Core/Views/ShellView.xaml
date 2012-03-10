@@ -8,7 +8,7 @@
 		TextOptions.TextHintingMode="Animated"
 		MouseDoubleClick="ShellView_OnMouseDoubleClick" Background="{DynamicResource _backgroundBrush}">
 	<Window.Resources>
-		
+		<BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
 	</Window.Resources>
 	<i:Interaction.Behaviors>
 		<Behaviors:BorderlessWindowBehavior/>
@@ -18,10 +18,21 @@
 			<RowDefinition Height="0.088*"/>
 			<RowDefinition Height="0.912*"/>
 		</Grid.RowDefinitions>
-		<TextBlock 
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		
+		
+		<TextBlock Grid.ColumnSpan="2"
 			MouseDown="OnMouseDown"
 			TextWrapping="Wrap" Text="Core" VerticalAlignment="Center" FontSize="48" FontWeight="Thin" TextAlignment="Center" Foreground="White"/>
 
-		<ContentControl Content="{Binding MainContent}" Grid.Row="1" IsTabStop="False"/>
+		<Button Grid.Row="0" Grid.Column="0" Content="BACK"
+				Style="{StaticResource NavigationButton}"
+				Command="{Binding NavigateBackCommand}"
+				Visibility="{Binding CanNavigateBack, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+		<ContentControl Content="{Binding MainContent}" Grid.Row="1" IsTabStop="False" Grid.ColumnSpan="2"/>
 	</Grid>
 </Window>

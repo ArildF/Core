@@ -23,6 +23,12 @@ namespace Rogue.Core.UI
 
 	public interface IModule
 	{
-		object TileViewModel { get; }
+		ITileViewModel TileViewModel { get; }
+		object MainViewModel { get; }
+	}
+
+	public interface ITileViewModel
+	{
+		IModule Module {get;}
 	}
 }

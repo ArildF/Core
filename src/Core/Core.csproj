@@ -133,12 +133,16 @@
     </Compile>
     <Compile Include="ViewModels\MainScreenViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\WeightMainScreenViewModel.cs" />
     <Compile Include="ViewModels\WeightTileViewModel.cs" />
     <Compile Include="Views\MainScreenView.xaml.cs">
       <DependentUpon>MainScreenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WeightMainScreenView.xaml.cs">
+      <DependentUpon>WeightMainScreenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WeightTileView.xaml.cs">
       <DependentUpon>WeightTileView.xaml</DependentUpon>
@@ -181,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WeightMainScreenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

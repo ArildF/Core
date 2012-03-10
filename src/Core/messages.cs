@@ -11,4 +11,14 @@
 	}
 
 	public class ApplicationLoadedMessage{}
+
+	public class NavigateMainModuleMessage
+	{
+		public IModule Module { get; private set; }
+
+		public NavigateMainModuleMessage(IModule module)
+		{
+			Module = module;
+		}
+	}
 }

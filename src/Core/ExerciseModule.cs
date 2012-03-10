@@ -2,9 +2,14 @@
 {
 	public class ExerciseModule : IModule
 	{
-		public object TileViewModel
+		public ITileViewModel TileViewModel
 		{
-			get { return "Exercise"; }
+			get { return null; }
+		}
+
+		public object MainViewModel
+		{
+			get { return null; }
 		}
 	}
 }
