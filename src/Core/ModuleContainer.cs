@@ -18,6 +18,7 @@ namespace Rogue.Core.UI
 		{
 			yield return Container.Resolve<WeightModule>();
 			yield return Container.Resolve<ExerciseModule>();
+			yield return Container.Resolve<DietModule>();
 		}
 	}
 }

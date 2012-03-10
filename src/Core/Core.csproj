@@ -119,6 +119,7 @@
     <Compile Include="Controls\TileItem.cs" />
     <Compile Include="Controls\TilePanel.cs" />
     <Compile Include="CoreWindsorInstaller.cs" />
+    <Compile Include="DietModule.cs" />
     <Compile Include="Infrastructure\DesignTime.cs" />
     <Compile Include="messages.cs" />
     <Compile Include="ExerciseModule.cs" />

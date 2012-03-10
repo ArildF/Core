@@ -11,7 +11,7 @@
              d:DesignHeight="700" d:DesignWidth="1200" 
 				d:DataContext="{Binding Mode=OneWay, Source={StaticResource SampleDataSource}}">
 	<Grid Infrastructure:DesignTime.Background="{StaticResource _backgroundBrush}">
-    	<Controls:TileControl HorizontalAlignment="Center" VerticalAlignment="Center"
+    	<Controls:TileControl HorizontalAlignment="Center" VerticalAlignment="Center" AlternationCount="3"
 							  ItemsSource="{Binding Path=ModuleTileViewModels}" IsTabStop="False"/>
     </Grid>
 </UserControl>
