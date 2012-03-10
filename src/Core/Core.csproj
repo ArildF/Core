@@ -119,6 +119,7 @@
     <Compile Include="Controls\TileItem.cs" />
     <Compile Include="Controls\TilePanel.cs" />
     <Compile Include="CoreWindsorInstaller.cs" />
+    <Compile Include="Infrastructure\DesignTime.cs" />
     <Compile Include="messages.cs" />
     <Compile Include="ExerciseModule.cs" />
     <Compile Include="Infrastructure\Extensions.cs" />
@@ -131,11 +132,15 @@
     </Compile>
     <Compile Include="ViewModels\MainScreenViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\WeightTileViewModel.cs" />
     <Compile Include="Views\MainScreenView.xaml.cs">
       <DependentUpon>MainScreenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WeightTileView.xaml.cs">
+      <DependentUpon>WeightTileView.xaml</DependentUpon>
     </Compile>
     <Compile Include="WeightModule.cs" />
   </ItemGroup>
@@ -175,6 +180,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WeightTileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

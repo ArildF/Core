@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using ReactiveUI;
 
 namespace Rogue.Core.UI.Views
@@ -39,6 +40,26 @@ namespace Rogue.Core.UI.Views
     	public Window Window
     	{
     		get { return this; }
+    	}
+
+    	private void ShellView_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+    	{
+
+    		if (e.ChangedButton == MouseButton.Left)
+    		{
+    			TextFormattingMode current = TextOptions.GetTextFormattingMode(this);
+    			SetValue(TextOptions.TextFormattingModeProperty,
+    			         current == TextFormattingMode.Display ? TextFormattingMode.Ideal : TextFormattingMode.Display);
+    		}
+			else if (e.ChangedButton == MouseButton.Right)
+			{
+				TextRenderingMode current = TextOptions.GetTextRenderingMode(this);
+				TextRenderingMode newMode = current == TextRenderingMode.ClearType
+				                            	? TextRenderingMode.Auto
+				                            	: (TextRenderingMode) ((int) ++current);
+				TextOptions.SetTextRenderingMode(this, newMode);
+
+			}
     	}
     }
 }

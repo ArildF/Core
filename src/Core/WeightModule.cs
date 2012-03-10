@@ -1,10 +1,14 @@
-﻿namespace Rogue.Core.UI
+﻿using Rogue.Core.UI.ViewModels;
+
+namespace Rogue.Core.UI
 {
 	public class WeightModule : IModule
 	{
-		public object TileViewModel
+		public WeightModule(WeightTileViewModel vm)
 		{
-			get { return "Weight"; }
+			TileViewModel = vm;
 		}
+
+		public object TileViewModel { get; private set; }
 	}
 }
