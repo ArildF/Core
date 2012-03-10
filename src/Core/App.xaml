@@ -6,12 +6,18 @@
 			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Rogue.Core.UI.App"
 			 >
-	
+
 	<Application.Resources>
 		<SampleData:SampleDataSource x:Key="SampleDataSource" d:IsDataSource="True"/>
+
+		<AlternationConverter x:Key="BackgroundConverter">
+			<SolidColorBrush>#FFE2D880</SolidColorBrush>
+			<SolidColorBrush>#FF5D71C2</SolidColorBrush>
+			<SolidColorBrush>#FFE2B180</SolidColorBrush>
+		</AlternationConverter>
+		
 		<Brush x:Key="_tileBackgroundBrush1">#FFE2D880</Brush>
-		<Brush x:Key="_tileBackgroundBrush2">#FF5D71C2</Brush>
-		<Brush x:Key="_tileBackgroundBrush3">#FFE2B180</Brush>
+		
 		<Style TargetType="{x:Type Controls:TileItem}">
 			<Setter Property="Margin" Value="3.5"/>
 			<Setter Property="MinWidth" Value="150"/>
@@ -29,14 +35,18 @@
 								</TransformGroup>
 							</Grid.RenderTransform>
 							<Border  Margin="1"
-								Background="{StaticResource _tileBackgroundBrush1}"
+								Background="{Binding RelativeSource={RelativeSource AncestorType=Controls:TileItem},
+											 Path=(ItemsControl.AlternationIndex),
+											 Converter={StaticResource BackgroundConverter}}"
 								BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}">
 								<Border.Effect>
 									<DropShadowEffect BlurRadius="10" ShadowDepth="11"/>
 								</Border.Effect>
 							</Border>
 							<Border x:Name="border"
-								Background="{StaticResource _tileBackgroundBrush1}"
+								Background="{Binding RelativeSource={RelativeSource AncestorType=Controls:TileItem},
+											 Path=(ItemsControl.AlternationIndex),
+											 Converter={StaticResource BackgroundConverter}}"
 								BorderBrush="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}">
 								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
 							</Border>
@@ -95,7 +105,7 @@
 								</VisualStateGroup>
 							</VisualStateManager.VisualStateGroups>
 						</Grid>
-						<ControlTemplate.Triggers>
+						<!--<ControlTemplate.Triggers>
 							<Trigger Property="ItemsControl.AlternationIndex" Value="1">
 								<Setter TargetName="border" Property="Background" 
 										Value="{StaticResource _tileBackgroundBrush2}"/>
@@ -104,7 +114,7 @@
 								<Setter TargetName="border" Property="Background" 
 										Value="{StaticResource _tileBackgroundBrush3}"/>
 							</Trigger>
-						</ControlTemplate.Triggers>
+						</ControlTemplate.Triggers>-->
 					</ControlTemplate>
 				</Setter.Value>
 			</Setter>

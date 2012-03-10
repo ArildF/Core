@@ -6,7 +6,7 @@
 			 xmlns:Infrastructure="clr-namespace:Rogue.Core.UI.Infrastructure" mc:Ignorable="d" 
 			 
 			 d:DesignHeight="150" d:DesignWidth="150">
-	<Grid Infrastructure:DesignTime.Background="{StaticResource _tileBackgroundBrush}">
+	<Grid Infrastructure:DesignTime.Background="{StaticResource _tileBackgroundBrush1}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="0.287*"/>
 			<RowDefinition Height="0.713*"/>
